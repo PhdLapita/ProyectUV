@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.gustavo.proyectouv.proyectuv.SensoresActivity"
+    tools:showIn="@layout/activity_sensores">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/containerCentral">
+
+        <ImageView
+            android:id="@+id/imgIndice"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/indice0" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/containerData"
+            android:gravity="center"
+            android:layout_below="@+id/imgIndice">
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/imgSol"
+                android:id="@+id/imgSol"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtSensor"
+                android:layout_toRightOf="@+id/imgSol"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:text="Indice UV: 0"
+                />
+        </RelativeLayout>
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:id="@+id/btnInfo"
+            android:textColor="#fff"
+            android:text="Ver recomendación"
+            android:background="@drawable/btn_rectangular_redondo"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="16dp"/>
+
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>
